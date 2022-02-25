@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results Page </title>
+    {% load static %}
+    <link rel='stylesheet' href="{% static 'css/styles.css' %}">
+    
+</head>
+
+<body>
+    <h1> New Member Names:</h1>
+    <p>Member's Name: {{memberName}}</p>
+    <!-- <nav>
+        <a href='/'>Home</a>
+        <a href='test/'>Test page</a>
+        <a href='about/'>About page</a>
+        <a href='contributors/'>Contributors page</a>
+        <a href='form/'>Sign up form</a>
+        
+    </nav>
+    <img src="{% static 'images/JardinDelValle.jpg' %}" alt="Del Valle Court Yard"> 
+    <h2>Welcome to {{propertyName}}, we are located in {{propertyLocation}}</h2>
+    <h4>We have the following town-homes here:</h4>
+    <ul>
+        {% for homies in propertyHomies %}
+            <li>{{homies}}</li>
+        {% endfor %}
+    </ul> -->
+</body>
+<footer>
+    <p>Jardin Del Valle &copy, 2022, Made by Osvaldo Jr.</p>
+</footer>
+</html>

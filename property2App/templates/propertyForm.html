@@ -19,7 +19,7 @@
         <a href='/contributors/'>Contributors page</a>
         <a href='/form/'>Sign up form</a>
     </nav>
-    <form action="/" method='post'>
+    <form action="/form/" method='post'>
         {% csrf_token %}
         <p>Name: <input name='memberName' type='text'></p>
         <button type='submit'>Submit</button>
