@@ -18,10 +18,18 @@
         <a href='/about/'>About page</a>
         <a href='/contributors/'>Contributors page</a>
         <a href='/form/'>Sign up form</a>
+        <a href='/the-shop/'>The Property Shop</a>
     </nav>
-    <form action="/form/" method='post'>
+    <form action="/add-new/" method='post'>
         {% csrf_token %}
-        <p>Name: <input name='memberName' type='text'></p>
+        <p>Name: <input name='memberName' id='memberName' type='text'></p>
+        <!-- {% for pl in places %}
+        <option value='{{pl}}'>{{pl}}</option>
+        {% endfor %} -->
+        <!-- <select name='places'>
+            <option value="Monterrey">Monterrey</option>
+            <option value="Houston">Houston</option>
+        </select> -->
         <button type='submit'>Submit</button>
     </form> 
 </body>

@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property 2 App </title>
+    <title>Jardin Del Valle Skills </title>
     {% load static %}
     <link rel='stylesheet' href="{% static 'css/styles.css' %}">
 </head>
 
 <body>
-    <h1> Welcome to our Property 2 Application!</h1>
+    <h1> Welcome to the {{welcome}}</h1>
     <nav>
         <a href='/'>Home</a>
         <a href='/test/'>Test page</a>
@@ -23,16 +23,26 @@
         <a href='/neighbor/'>Meet Your Neighbors</a>
         <a href='/addNew/'>Add a New Neighbor</a>
     </nav>
-    <img src="{% static 'images/JardinDelValle.jpg' %}" alt="Del Valle Court Yard"> 
-    <h2>Welcome to {{propertyName}}, we are located in {{propertyLocation}}</h2>
-    <h4>We have the following town-homes here:</h4>
+
+<div class='main'>
     <ul>
-        {% for homies in propertyHomies %}
-            <li>{{homies}}</li>
+        Here are the skills we have learned at Coding Dojo
+        {% for skill in skills %}
+        <li>{{skill.skillName}}</li>
         {% endfor %}
     </ul>
-</body>
+    <form action='/addSkill/' method='post'>
+        {% csrf_token %}
+        <label for='skillName'>Skill Name</label>
+        <input type='text' id='skillName' name='skillName'>
+        <button>Add New Skill</button>
+    </form>
+</div>    
+
 <footer>
     <p>Jardin Del Valle &copy, 2022, Made by Osvaldo Jr.</p>
 </footer>
+
+</body>
+
 </html>

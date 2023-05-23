@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property 2 App </title>
+    <title>Jardin Del Valle Neighbors </title>
     {% load static %}
     <link rel='stylesheet' href="{% static 'css/styles.css' %}">
+    
 </head>
 
 <body>
@@ -19,18 +20,22 @@
         <a href='/contributors/'>Contributors page</a>
         <a href='/form/'>Sign up form</a>
         <a href='/the-shop/'>The Property Shop</a>
-        <a href='/skills/'>Skills we have learned</a>
         <a href='/neighbor/'>Meet Your Neighbors</a>
         <a href='/addNew/'>Add a New Neighbor</a>
     </nav>
-    <img src="{% static 'images/JardinDelValle.jpg' %}" alt="Del Valle Court Yard"> 
-    <h2>Welcome to {{propertyName}}, we are located in {{propertyLocation}}</h2>
-    <h4>We have the following town-homes here:</h4>
-    <ul>
-        {% for homies in propertyHomies %}
-            <li>{{homies}}</li>
+<div class='main'>
+    <h2>Meet all our Neighbors</h2>
+    <div class='neighbor'>
+        {% for neighbor in allNeighbor %}
+        <div class='neighbor'>
+            <h3>{{neighbor.neighborName}}</h3>
+            <p>{{neighbor.neighborType}}</p>
+            <p>Date of Birth: {{neighbor.neighborBirthDay}}</p>
+        </div>
         {% endfor %}
-    </ul>
+    </div>
+</div>
+    
 </body>
 <footer>
     <p>Jardin Del Valle &copy, 2022, Made by Osvaldo Jr.</p>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Add New Neighbor </title>
+    {% load static %}
+    <link rel='stylesheet' href="{% static 'css/styles.css' %}">
+    
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href='/'>Home</a>
+            <a href='/test/'>Test page</a>
+            <a href='/about/'>About page</a>
+            <a href='/contributors/'>Contributors page</a>
+            <a href='/form/'>Sign up form</a>
+            <a href='/the-shop/'>The Property Shop</a>
+            <a href='/neighbor/'>Meet Your Neighbors</a>
+            <a href='/addNew/'>Add a New Neighbor</a>
+        </nav>
+    </header>
+    <div class='main'>
+        <form action= '/create/' method='post'>
+            {% csrf_token %}
+            <section>
+                <label for='neighborName'>Neighbors Name</label>
+                <input type='text' id='neighborName'
+                name='neighborName'> 
+            </section>
+            <section>
+                <label for='neighborType'>Neighbor Occupation</label>
+                <input type='text' id='neighborType'
+                name='neighborType'> 
+            </section>
+            <section>
+                <label for='neighborBirthDay'>Neighbors Birthday</label>
+                <input type='date' id='neighborBirthDay'
+                name='neighborBirthDay'> 
+            </section>
+            <button>Add Neighbor</button>
+        </form>
+</div>
+    
+</body>
+<footer>
+    <p>Jardin Del Valle &copy, 2022, Made by Osvaldo Jr.</p>
+</footer>
+</html>

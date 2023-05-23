@@ -9,7 +9,7 @@ $(document).ready(function() {
 
     // using the sixtieshouse class to create an alert that states clicked on an ninjapizza
     $('.sixtieshouse').click(function(){
-        alert('Have not had that spirit here since 1969!')
+        alert('Have not had that spirit here since 1969!');
     })
 
     //add a color class to the h1 tag
@@ -28,22 +28,22 @@ $(document).ready(function() {
         $('.landscapingart').fadeIn();
     })
 
-    // Adding in text without an event
-    $('#append').append('We are adding text using jQuery!')
+     // Adding in text without an event
+    $('#append').append("We are adding text using jQuery!")
 
     // add more text to the h3 tage using an event
-    $('addMore').click(function(){
-        $('#append').prepend("Rent here, Love here!")
-    })
-})
+    $('#append').prepend("Rent here, Love here!")
     
+    })
+
+
     /*jQuery How_to Steps:
 1.) declare function
 2.) give instructions - ie.) hide just p tags
 
 
 
-*/
+*/ 
 // $('li').click(function(){
 //     console.log("The user chose "+this.innerHTML)
 //     var chose = this.innerHTML.toLowerCase()
